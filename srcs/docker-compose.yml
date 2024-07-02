@@ -16,7 +16,7 @@ services:
     restart: unless-stopped
     env_file: .env
     healthcheck:
-      test: mysqladmin ping --host=localhost -p${SQL_ROOT_PASSWORD}
+      test: mysqladmin ping --host=localhost -pSQL_ROOT_PASSWO${RD}
       interval: 5s
       timeout: 1s
       retries: 20

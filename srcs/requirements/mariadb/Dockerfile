@@ -15,6 +15,8 @@ RUN chmod -R 755 /var/run/mysqld/
 RUN chown mysql:mysql /var/lib/mysql/
 RUN chmod -R 755 /var/lib/mysql/
 
+EXPOSE 3306
+
 COPY ./tools/dbscript.sh ./
 RUN chmod +x ./dbscript.sh
 
